@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼촌의 한약 고찰 - 창원 동양한의원</title>
+    <meta name="description" content="조정식 원장님의 깊은 한의학 철학과 일상의 지혜를 담은 칼럼 모음. 한약과 건강에 대한 성찰적 글들을 만나보세요.">
+    <meta name="keywords" content="한약고찰, 한의학철학, 조정식원장, 창원한의원, 한약칼럼, 건강철학">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="삼촌의 한약 고찰 - 창원 동양한의원">
+    <meta property="og:description" content="조정식 원장님의 깊은 한의학 철학과 일상의 지혜를 담은 칼럼 모음">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="삼촌의 한약 고찰 - 창원 동양한의원">
+    <meta property="twitter:description" content="조정식 원장님의 깊은 한의학 철학과 일상의 지혜를 담은 칼럼 모음">
+    <meta property="twitter:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'korean': ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif']
+                    },
+                    colors: {
+                        'warm-gray': {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-korean text-warm-gray-800 bg-warm-gray-50">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-warm-gray-900">
+                        창원 동양한의원
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">홈</a>
+                        <a href="#" class="text-warm-gray-900 hover:text-warm-gray-600 px-3 py-2 text-sm font-medium transition-colors">삼촌의 한약 고찰</a>
+                        <a href="blog.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">블로그</a>
+                        <a href="treatment.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">진료안내</a>
+                        <a href="consultation.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">상담신청</a>
+                        <a href="location.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">오시는길</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-warm-gray-600 hover:text-warm-gray-900 focus:outline-none focus:text-warm-gray-900">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="index.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">홈</a>
+                <a href="#" class="text-warm-gray-900 block px-3 py-2 text-base font-medium">삼촌의 한약 고찰</a>
+                <a href="blog.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">블로그</a>
+                <a href="treatment.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">진료안내</a>
+                <a href="consultation.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">상담신청</a>
+                <a href="location.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">오시는길</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Page Header -->
+        <section class="bg-gradient-to-b from-warm-gray-50 to-white py-20">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl md:text-5xl font-light text-warm-gray-900 mb-6">삼촌의 한약 고찰</h1>
+                <p class="text-xl text-warm-gray-600 leading-relaxed">
+                    한의학에 대한 깊은 성찰과 일상의 지혜,<br>
+                    그리고 건강한 삶을 위한 작은 통찰들을 나눕니다.
+                </p>
+                
+                <!-- Category Filter -->
+                <div class="mt-12">
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button class="filter-btn active" data-category="all">전체</button>
+                        <button class="filter-btn" data-category="philosophy">한의학 철학</button>
+                        <button class="filter-btn" data-category="herbs">한약 이야기</button>
+                        <button class="filter-btn" data-category="seasons">계절과 건강</button>
+                        <button class="filter-btn" data-category="lifestyle">생활 속 지혜</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Column Articles -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="column-grid">
+                    
+                    <!-- Article 1 -->
+                    <article class="column-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="seasons" id="spring-herbs">
+                        <img src="https://picsum.photos/400/300?random=11" alt="봄철 한약" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">계절과 건강</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.15</time>
+                            </div>
+                            <h2 class="text-xl font-medium text-warm-gray-900 mb-4 leading-tight">봄철 몸의 변화와 한약의 역할</h2>
+                            <p class="text-warm-gray-600 leading-relaxed mb-6">
+                                계절의 변화와 함께 우리 몸도 자연스럽게 적응해 나갑니다. 봄철에 나타나는 몸의 신호들을 어떻게 이해하고, 
+                                한약이 어떤 도움을 줄 수 있는지에 대한 이야기입니다.
+                            </p>
+                            <div class="text-warm-gray-600 leading-relaxed">
+                                <p class="mb-4">
+                                    겨울 동안 움츠렸던 몸과 마음이 봄기운과 함께 깨어나는 시기입니다. 
+                                    이때 우리 몸은 새로운 에너지 순환을 준비하며, 간혹 여러 증상들이 나타날 수 있습니다.
+                                </p>
+                                <p class="mb-4">
+                                    한의학에서 봄은 '목(木)'의 계절로, 간(肝)과 관련이 깊습니다. 
+                                    간의 기능이 활발해지면서 감정의 변화나 소화기능의 변화를 경험하는 분들이 많습니다.
+                                </p>
+                                <p>
+                                    이러한 자연스러운 변화를 이해하고, 적절한 한약 처방을 통해 
+                                    몸의 리듬을 부드럽게 조율해 나가는 것이 중요합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="column-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="philosophy" id="mind-body">
+                        <img src="https://picsum.photos/400/300?random=12" alt="심신일체" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">한의학 철학</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.08</time>
+                            </div>
+                            <h2 class="text-xl font-medium text-warm-gray-900 mb-4 leading-tight">마음과 몸이 하나가 되는 순간</h2>
+                            <p class="text-warm-gray-600 leading-relaxed mb-6">
+                                한의학에서 말하는 심신일체의 개념을 현대적 관점에서 바라보고, 
+                                일상에서 실천할 수 있는 방법들을 탐구해봅니다.
+                            </p>
+                            <div class="text-warm-gray-600 leading-relaxed">
+                                <p class="mb-4">
+                                    서양의학이 몸과 마음을 분리해서 보는 경우가 많다면, 
+                                    한의학은 처음부터 둘을 하나로 보는 관점에서 출발합니다.
+                                </p>
+                                <p class="mb-4">
+                                    스트레스가 위장에 영향을 미치고, 소화불량이 다시 마음의 불안을 가져오는 것처럼, 
+                                    모든 것이 연결되어 있다는 것을 경험으로 알고 계실 겁니다.
+                                </p>
+                                <p>
+                                    진료실에서 만나는 많은 분들이 몸의 치료와 함께 마음의 평안도 함께 찾아가시는 모습을 보며, 
+                                    한의학의 이런 접근이 얼마나 자연스러운 것인지 새삼 느끼게 됩니다.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="column-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="lifestyle" id="constitution">
+                        <img src="https://picsum.photos/400/300?random=13" alt="체질 이해" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">생활 속 지혜</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.01</time>
+                            </div>
+                            <h2 class="text-xl font-medium text-warm-gray-900 mb-4 leading-tight">나만의 체질을 알아가는 여정</h2>
+                            <p class="text-warm-gray-600 leading-relaxed mb-6">
+                                각자가 가진 고유한 체질적 특성을 이해하고, 그에 맞는 생활 습관과 식습관을 
+                                찾아가는 과정에 대한 이야기입니다.
+                            </p>
+                            <div class="text-warm-gray-600 leading-relaxed">
+                                <p class="mb-4">
+                                    체질이라는 것은 태어날 때부터 가진 고유한 특성입니다. 
+                                    어떤 음식을 먹으면 좋고, 어떤 환경에서 편안함을 느끼는지가 모두 다릅니다.
+                                </p>
+                                <p class="mb-4">
+                                    같은 증상이라도 사람마다 원인이 다르고 치료법도 달라야 하는 이유가 여기에 있습니다. 
+                                    획일적인 건강법보다는 자신만의 방법을 찾는 것이 중요합니다.
+                                </p>
+                                <p>
+                                    체질을 안다는 것은 자신을 더 깊이 이해하는 일이기도 합니다. 
+                                    몸의 소리에 귀 기울이며 천천히 알아가는 과정 자체가 치유가 됩니다.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="column-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="herbs">
+                        <img src="https://picsum.photos/400/300?random=14" alt="한약 이야기" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">한약 이야기</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.02.25</time>
+                            </div>
+                            <h2 class="text-xl font-medium text-warm-gray-900 mb-4 leading-tight">한약재에 담긴 자연의 지혜</h2>
+                            <p class="text-warm-gray-600 leading-relaxed mb-6">
+                                수천 년 동안 검증되어 온 한약재들이 어떻게 우리 몸의 균형을 맞춰주는지, 
+                                그 신비로운 작용 원리에 대해 알아봅니다.
+                            </p>
+                            <div class="text-warm-gray-600 leading-relaxed">
+                                <p class="mb-4">
+                                    한약재 하나하나에는 수많은 성분이 복합적으로 들어있어서, 
+                                    단순히 특정 성분만으로는 설명할 수 없는 작용을 합니다.
+                                </p>
+                                <p class="mb-4">
+                                    마치 오케스트라처럼 여러 약재들이 조화롭게 어우러져 
+                                    우리 몸의 리듬을 자연스럽게 조율해 주는 것이 한약의 특징입니다.
+                                </p>
+                                <p>
+                                    이런 복합적인 작용 덕분에 부작용은 적으면서도 근본적인 치료가 가능한 것이죠. 
+                                    자연이 주는 선물을 겸손하게 받아들이는 마음으로 처방하고 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="column-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="philosophy">
+                        <img src="https://picsum.photos/400/300?random=15" alt="치료 철학" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">한의학 철학</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.02.18</time>
+                            </div>
+                            <h2 class="text-xl font-medium text-warm-gray-900 mb-4 leading-tight">치료가 아닌 동행에 대한 생각</h2>
+                            <p class="text-warm-gray-600 leading-relaxed mb-6">
+                                의사와 환자의 관계, 그리고 진정한 치유가 무엇인지에 대한 한의사로서의 
+                                솔직한 생각을 나누어 봅니다.
+                            </p>
+                            <div class="text-warm-gray-600 leading-relaxed">
+                                <p class="mb-4">
+                                    진료실에서 환자분을 만날 때마다 느끼는 것은, 제가 치료하는 것이 아니라 
+                                    환자분이 스스로 회복할 수 있도록 도움을 드리는 것이라는 점입니다.
+                                </p>
+                                <p class="mb-4">
+                                    몸은 본래 스스로 치유하는 능력을 가지고 있습니다. 
+                                    한약과 침은 그 자연 치유력을 깨우고 도와주는 역할을 할 뿐입니다.
+                                </p>
+                                <p>
+                                    그래서 치료보다는 동행이라는 표현이 더 맞는 것 같습니다. 
+                                    함께 걸어가며 건강을 되찾아가는 여정의 동반자가 되고 싶습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="column-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" data-category="lifestyle">
+                        <img src="https://picsum.photos/400/300?random=16" alt="일상의 건강" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">생활 속 지혜</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.02.10</time>
+                            </div>
+                            <h2 class="text-xl font-medium text-warm-gray-900 mb-4 leading-tight">작은 습관이 만드는 큰 변화</h2>
+                            <p class="text-warm-gray-600 leading-relaxed mb-6">
+                                거창한 건강법보다는 일상의 작은 습관들이 어떻게 우리 건강에 
+                                큰 영향을 미치는지에 대한 이야기입니다.
+                            </p>
+                            <div class="text-warm-gray-600 leading-relaxed">
+                                <p class="mb-4">
+                                    건강은 하루아침에 만들어지는 것이 아닙니다. 
+                                    매일매일의 작은 선택들이 쌓여서 만들어지는 것이죠.
+                                </p>
+                                <p class="mb-4">
+                                    아침에 일어나는 시간, 물을 마시는 습관, 식사하는 속도, 
+                                    잠들기 전의 시간 보내기 등 모든 것이 건강과 연결되어 있습니다.
+                                </p>
+                                <p>
+                                    완벽하지 않아도 됩니다. 작은 것부터 시작해서 천천히 바꿔나가다 보면, 
+                                    어느새 몸이 더 가벼워지고 마음도 편안해지는 것을 느낄 수 있을 것입니다.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="text-center mt-16">
+                    <button class="bg-warm-gray-100 hover:bg-warm-gray-200 text-warm-gray-800 px-8 py-3 rounded-lg transition-colors">
+                        더 많은 글 보기
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-warm-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-medium mb-4">창원 동양한의원</h3>
+                    <p class="text-warm-gray-300 text-sm leading-relaxed">
+                        몸의 리듬을 돌보는 한의학으로<br>
+                        건강한 일상을 함께 만들어갑니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">바로가기</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-warm-gray-300 hover:text-white transition-colors">삼촌의 한약 고찰</a></li>
+                        <li><a href="blog.html" class="text-warm-gray-300 hover:text-white transition-colors">블로그</a></li>
+                        <li><a href="treatment.html" class="text-warm-gray-300 hover:text-white transition-colors">진료안내</a></li>
+                        <li><a href="consultation.html" class="text-warm-gray-300 hover:text-white transition-colors">상담신청</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">진료 문의</h4>
+                    <div class="text-sm space-y-2">
+                        <p class="text-warm-gray-300">055-123-4567</p>
+                        <p class="text-warm-gray-300">평일 09:00-18:00</p>
+                        <p class="text-warm-gray-300">토요일 09:00-15:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-warm-gray-700 mt-8 pt-8 text-center text-sm text-warm-gray-400">
+                <p>&copy; 2024 창원 동양한의원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Category filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const columnItems = document.querySelectorAll('.column-item');
+            
+            // Add styles for filter buttons
+            const style = document.createElement('style');
+            style.textContent = `
+                .filter-btn {
+                    padding: 8px 16px;
+                    border: 1px solid #d6d3d1;
+                    border-radius: 20px;
+                    background: white;
+                    color: #78716c;
+                    font-size: 14px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                }
+                .filter-btn:hover {
+                    background: #f5f5f4;
+                    transform: translateY(-1px);
+                }
+                .filter-btn.active {
+                    background: #292524;
+                    color: white;
+                    border-color: #292524;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    
+                    columnItems.forEach(item => {
+                        if (category === 'all' || item.dataset.category === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

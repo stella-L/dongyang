@@ -1,0 +1,74 @@
+# Robots.txt for 창원 동양한의원
+# 검색엔진 크롤링 가이드라인
+
+User-agent: *
+Allow: /
+
+# 정적 자원들은 크롤링 허용
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+
+# 사이트맵 위치 지정
+Sitemap: https://www.창원동양한의원.com/sitemap.xml
+
+# 검색엔진별 특별 지침
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Naver
+User-agent: Yeti
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# 악성 봇 차단
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# 임시 파일이나 백업 파일 차단
+Disallow: /*.bak
+Disallow: /*.tmp
+Disallow: /*~
+Disallow: /*.old
+
+# 로그 파일 차단
+Disallow: /*.log
+
+# 관리자 관련 파일 차단 (실제 사용시 추가)
+# Disallow: /admin/
+# Disallow: /wp-admin/
+# Disallow: /private/
+
+# 검색 결과 페이지 차단 (동적 생성되는 경우)
+# Disallow: /*?search=
+# Disallow: /*?query=
+
+# 중복 콘텐츠 방지 (URL 파라미터)
+# Disallow: /*?utm_source=
+# Disallow: /*?utm_medium=
+# Disallow: /*?utm_campaign=

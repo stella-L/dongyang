@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창원 동양한의원 - 몸의 리듬을 돌보는 한의학</title>
+    <meta name="description" content="창원 동양한의원은 조정식 원장님의 깊은 한의학 철학을 바탕으로 부정맥, 기외수축, 난소기능부전증 등을 치료합니다. 삼촌의 한약 고찰 칼럼과 함께 건강한 삶을 제안합니다.">
+    <meta name="keywords" content="창원한의원, 동양한의원, 부정맥치료, 기외수축, 난소기능부전증, 한의학, 조정식원장, 한약, 창원시">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="창원 동양한의원 - 몸의 리듬을 돌보는 한의학">
+    <meta property="og:description" content="창원 동양한의원은 조정식 원장님의 깊은 한의학 철학을 바탕으로 부정맥, 기외수축, 난소기능부전증 등을 치료합니다.">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="창원 동양한의원 - 몸의 리듬을 돌보는 한의학">
+    <meta property="twitter:description" content="창원 동양한의원은 조정식 원장님의 깊은 한의학 철학을 바탕으로 부정맥, 기외수축, 난소기능부전증 등을 치료합니다.">
+    <meta property="twitter:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'korean': ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif']
+                    },
+                    colors: {
+                        'warm-gray': {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-korean text-warm-gray-800 bg-warm-gray-50">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-2xl font-bold text-warm-gray-900">
+                        창원 동양한의원
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="text-warm-gray-900 hover:text-warm-gray-600 px-3 py-2 text-sm font-medium transition-colors">홈</a>
+                        <a href="column.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">삼촌의 한약 고찰</a>
+                        <a href="blog.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">블로그</a>
+                        <a href="treatment.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">진료안내</a>
+                        <a href="consultation.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">상담신청</a>
+                        <a href="location.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">오시는길</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-warm-gray-600 hover:text-warm-gray-900 focus:outline-none focus:text-warm-gray-900">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#" class="text-warm-gray-900 block px-3 py-2 text-base font-medium">홈</a>
+                <a href="column.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">삼촌의 한약 고찰</a>
+                <a href="blog.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">블로그</a>
+                <a href="treatment.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">진료안내</a>
+                <a href="consultation.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">상담신청</a>
+                <a href="location.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">오시는길</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section with Search -->
+        <section class="bg-gradient-to-b from-warm-gray-50 to-white py-20">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <!-- Search Bar -->
+                <div class="mb-16">
+                    <div class="max-w-xl mx-auto">
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="증상, 칼럼, 치료법을 검색해보세요..." 
+                                   class="w-full px-6 py-4 text-lg border border-warm-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-warm-gray-300 focus:border-transparent shadow-sm">
+                            <button id="search-button" class="absolute right-2 top-2 p-2 text-warm-gray-500 hover:text-warm-gray-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Philosophy Statement -->
+                <h1 class="text-4xl md:text-6xl font-light text-warm-gray-900 mb-8 leading-tight">
+                    몸의 리듬을<br>돌본다는 것
+                </h1>
+                <p class="text-xl text-warm-gray-600 mb-12 leading-relaxed">
+                    마음과 몸이 하나가 되어 자연스럽게 흐르는 건강함을 찾아갑니다.<br>
+                    깊은 관찰과 따뜻한 마음으로 당신의 이야기에 귀 기울입니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Treatment Overview -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-light text-warm-gray-900 mb-4">진료 분야</h2>
+                    <p class="text-lg text-warm-gray-600">각각의 증상에 맞는 세심한 접근으로 근본적인 치료를 제공합니다</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <article class="bg-warm-gray-50 rounded-lg p-8 hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-warm-gray-200 rounded-lg mb-6 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-warm-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-medium text-warm-gray-900 mb-3">심계·부정맥</h3>
+                        <p class="text-warm-gray-600 leading-relaxed">두근거림과 불규칙한 맥박의 원인을 한의학적 관점에서 파악하고 마음의 안정과 함께 치료합니다.</p>
+                    </article>
+                    
+                    <article class="bg-warm-gray-50 rounded-lg p-8 hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-warm-gray-200 rounded-lg mb-6 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-warm-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-medium text-warm-gray-900 mb-3">부인과 질환</h3>
+                        <p class="text-warm-gray-600 leading-relaxed">생리불순, 난소기능부전증 등 여성 고유의 생리적 리듬을 회복하여 자연스러운 건강을 되찾습니다.</p>
+                    </article>
+                    
+                    <article class="bg-warm-gray-50 rounded-lg p-8 hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-warm-gray-200 rounded-lg mb-6 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-warm-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-medium text-warm-gray-900 mb-3">소화기·체질개선</h3>
+                        <p class="text-warm-gray-600 leading-relaxed">개인의 체질을 정확히 파악하여 소화기능 개선과 전반적인 건강 증진을 도모합니다.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Column Preview -->
+        <section class="py-20 bg-warm-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-light text-warm-gray-900 mb-4">삼촌의 한약 고찰</h2>
+                    <p class="text-lg text-warm-gray-600">한의학에 대한 깊은 성찰과 일상의 지혜를 나눕니다</p>
+                    <a href="column.html" class="inline-block mt-4 text-warm-gray-600 hover:text-warm-gray-900 text-sm font-medium transition-colors">
+                        전체 보기 →
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://picsum.photos/400/240?random=1" alt="한약에 대한 고찰" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <time class="text-sm text-warm-gray-500">2024.03.15</time>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mt-2 mb-3">봄철 몸의 변화와 한약의 역할</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed">계절의 변화와 함께 우리 몸도 자연스럽게 적응해 나갑니다. 봄철에 나타나는 몸의 신호들을 어떻게 이해하고...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://picsum.photos/400/240?random=2" alt="마음과 몸의 연결" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <time class="text-sm text-warm-gray-500">2024.03.08</time>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mt-2 mb-3">마음과 몸이 하나가 되는 순간</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed">한의학에서 말하는 심신일체의 개념을 현대적 관점에서 바라보고, 일상에서 실천할 수 있는 방법들을...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://picsum.photos/400/240?random=3" alt="체질과 건강" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <time class="text-sm text-warm-gray-500">2024.03.01</time>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mt-2 mb-3">나만의 체질을 알아가는 여정</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed">각자가 가진 고유한 체질적 특성을 이해하고, 그에 맞는 생활 습관과 식습관을 찾아가는 과정에 대해...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-light text-warm-gray-900 mb-4">블로그</h2>
+                    <p class="text-lg text-warm-gray-600">건강한 일상을 위한 작은 팁들과 진료 이야기를 공유합니다</p>
+                    <a href="blog.html" class="inline-block mt-4 text-warm-gray-600 hover:text-warm-gray-900 text-sm font-medium transition-colors">
+                        전체 보기 →
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article class="flex space-x-4">
+                        <img src="https://picsum.photos/120/120?random=4" alt="건강 팁" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
+                        <div>
+                            <time class="text-sm text-warm-gray-500">2024.03.20</time>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">봄철 알레르기 예방을 위한 생활수칙</h3>
+                            <p class="text-warm-gray-600 text-sm">꽃가루가 날리는 계절, 미리 준비하는 자연스러운 예방법들</p>
+                        </div>
+                    </article>
+                    
+                    <article class="flex space-x-4">
+                        <img src="https://picsum.photos/120/120?random=5" alt="진료 후기" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
+                        <div>
+                            <time class="text-sm text-warm-gray-500">2024.03.18</time>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">두근거림 완화를 위한 호흡법</h3>
+                            <p class="text-warm-gray-600 text-sm">간단하지만 효과적인 마음 안정 호흡 실습법</p>
+                        </div>
+                    </article>
+                    
+                    <article class="flex space-x-4">
+                        <img src="https://picsum.photos/120/120?random=6" alt="건강 정보" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
+                        <div>
+                            <time class="text-sm text-warm-gray-500">2024.03.15</time>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">체질에 맞는 음식 선택하기</h3>
+                            <p class="text-warm-gray-600 text-sm">개인 체질별 권장 식품과 주의사항 안내</p>
+                        </div>
+                    </article>
+                    
+                    <article class="flex space-x-4">
+                        <img src="https://picsum.photos/120/120?random=7" alt="계절 건강" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
+                        <div>
+                            <time class="text-sm text-warm-gray-500">2024.03.12</time>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">환절기 감기 예방 차 레시피</h3>
+                            <p class="text-warm-gray-600 text-sm">집에서 쉽게 만들 수 있는 건강차 만들기</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info -->
+        <section class="py-20 bg-warm-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Clinic Hours -->
+                    <div class="bg-white rounded-lg p-8">
+                        <h3 class="text-2xl font-light text-warm-gray-900 mb-6">진료시간</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-warm-gray-600">평일</span>
+                                <span class="text-warm-gray-900">09:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-warm-gray-600">토요일</span>
+                                <span class="text-warm-gray-900">09:00 - 15:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-warm-gray-600">점심시간</span>
+                                <span class="text-warm-gray-900">12:30 - 14:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-warm-gray-600">휴무</span>
+                                <span class="text-warm-gray-900">일요일, 공휴일</span>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <a href="consultation.html" class="inline-block bg-warm-gray-900 text-white px-6 py-3 rounded-lg hover:bg-warm-gray-700 transition-colors">
+                                상담 신청하기
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="bg-white rounded-lg p-8">
+                        <h3 class="text-2xl font-light text-warm-gray-900 mb-6">오시는 길</h3>
+                        <address class="not-italic text-warm-gray-600 mb-4">
+                            경상남도 창원시 의창구<br>
+                            용호동 123-45 동양빌딩 2층
+                        </address>
+                        <div class="text-sm text-warm-gray-500 mb-6">
+                            <p>• 용호동 주민센터 인근</p>
+                            <p>• 무료 주차 가능</p>
+                            <p>• 버스 정류장 도보 3분</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-warm-gray-900">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                055-123-4567
+                            </div>
+                            <a href="location.html" class="inline-block text-warm-gray-600 hover:text-warm-gray-900 text-sm font-medium transition-colors">
+                                상세 위치 보기 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-warm-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-medium mb-4">창원 동양한의원</h3>
+                    <p class="text-warm-gray-300 text-sm leading-relaxed">
+                        몸의 리듬을 돌보는 한의학으로<br>
+                        건강한 일상을 함께 만들어갑니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">바로가기</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="column.html" class="text-warm-gray-300 hover:text-white transition-colors">삼촌의 한약 고찰</a></li>
+                        <li><a href="blog.html" class="text-warm-gray-300 hover:text-white transition-colors">블로그</a></li>
+                        <li><a href="treatment.html" class="text-warm-gray-300 hover:text-white transition-colors">진료안내</a></li>
+                        <li><a href="consultation.html" class="text-warm-gray-300 hover:text-white transition-colors">상담신청</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">진료 문의</h4>
+                    <div class="text-sm space-y-2">
+                        <p class="text-warm-gray-300">055-123-4567</p>
+                        <p class="text-warm-gray-300">평일 09:00-18:00</p>
+                        <p class="text-warm-gray-300">토요일 09:00-15:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-warm-gray-700 mt-8 pt-8 text-center text-sm text-warm-gray-400">
+                <p>&copy; 2024 창원 동양한의원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

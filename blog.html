@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 - 창원 동양한의원</title>
+    <meta name="description" content="창원 동양한의원의 건강 정보와 일상의 건강 팁, 진료 후기를 담은 블로그입니다. 한의학 관점에서 바라본 건강한 생활법을 알아보세요.">
+    <meta name="keywords" content="창원한의원블로그, 건강팁, 한의학정보, 진료후기, 건강관리, 생활건강">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="블로그 - 창원 동양한의원">
+    <meta property="og:description" content="창원 동양한의원의 건강 정보와 일상의 건강 팁, 진료 후기를 담은 블로그">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="블로그 - 창원 동양한의원">
+    <meta property="twitter:description" content="창원 동양한의원의 건강 정보와 일상의 건강 팁, 진료 후기를 담은 블로그">
+    <meta property="twitter:image" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'korean': ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif']
+                    },
+                    colors: {
+                        'warm-gray': {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-korean text-warm-gray-800 bg-warm-gray-50">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-warm-gray-900">
+                        창원 동양한의원
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">홈</a>
+                        <a href="column.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">삼촌의 한약 고찰</a>
+                        <a href="#" class="text-warm-gray-900 hover:text-warm-gray-600 px-3 py-2 text-sm font-medium transition-colors">블로그</a>
+                        <a href="treatment.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">진료안내</a>
+                        <a href="consultation.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">상담신청</a>
+                        <a href="location.html" class="text-warm-gray-600 hover:text-warm-gray-900 px-3 py-2 text-sm font-medium transition-colors">오시는길</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-warm-gray-600 hover:text-warm-gray-900 focus:outline-none focus:text-warm-gray-900">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="index.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">홈</a>
+                <a href="column.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">삼촌의 한약 고찰</a>
+                <a href="#" class="text-warm-gray-900 block px-3 py-2 text-base font-medium">블로그</a>
+                <a href="treatment.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">진료안내</a>
+                <a href="consultation.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">상담신청</a>
+                <a href="location.html" class="text-warm-gray-600 hover:text-warm-gray-900 block px-3 py-2 text-base font-medium">오시는길</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Page Header -->
+        <section class="bg-gradient-to-b from-warm-gray-50 to-white py-20">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl md:text-5xl font-light text-warm-gray-900 mb-6">블로그</h1>
+                <p class="text-xl text-warm-gray-600 leading-relaxed">
+                    건강한 일상을 위한 작은 팁들과<br>
+                    진료실에서 만난 이야기들을 나눕니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <article class="bg-gradient-to-r from-warm-gray-50 to-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                        <div class="order-2 lg:order-1 p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">건강 팁</span>
+                                <time class="text-sm text-warm-gray-500 ml-4">2024.03.20</time>
+                            </div>
+                            <h2 class="text-2xl lg:text-3xl font-light text-warm-gray-900 mb-4 leading-tight">봄철 알레르기 예방을 위한 생활수칙</h2>
+                            <p class="text-warm-gray-600 leading-relaxed mb-6">
+                                꽃가루가 날리는 계절이 다가왔습니다. 알레르기 증상으로 고생하시는 분들을 위해 
+                                미리 준비할 수 있는 자연스러운 예방법들을 정리해보았습니다.
+                            </p>
+                            <a href="#allergy-prevention" class="inline-flex items-center text-warm-gray-900 hover:text-warm-gray-600 font-medium transition-colors">
+                                자세히 읽기
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <img src="https://picsum.photos/600/400?random=21" alt="봄철 알레르기 예방" class="w-full h-64 lg:h-full object-cover">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="py-20 bg-warm-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Blog Post 1 -->
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" id="breathing">
+                        <img src="https://picsum.photos/400/240?random=22" alt="호흡법" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">마음건강</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.18</time>
+                            </div>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mb-3 leading-tight">두근거림 완화를 위한 호흡법</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed mb-4">
+                                갑작스러운 두근거림이나 불안감이 느껴질 때 실천할 수 있는 간단하지만 효과적인 마음 안정 호흡법을 소개합니다.
+                            </p>
+                            <div class="text-xs text-warm-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                3분 읽기
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow" id="constitution-food">
+                        <img src="https://picsum.photos/400/240?random=23" alt="체질별 음식" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">체질건강</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.15</time>
+                            </div>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mb-3 leading-tight">체질에 맞는 음식 선택하기</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed mb-4">
+                                같은 음식이라도 사람마다 다른 반응을 보이는 이유와 개인 체질별 권장 식품, 주의사항을 알아봅니다.
+                            </p>
+                            <div class="text-xs text-warm-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                5분 읽기
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://picsum.photos/400/240?random=24" alt="건강차" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">생활건강</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.12</time>
+                            </div>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mb-3 leading-tight">환절기 감기 예방 차 레시피</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed mb-4">
+                                집에서 쉽게 만들 수 있는 면역력 강화 건강차 만들기. 자연 재료로 몸을 따뜻하게 해주세요.
+                            </p>
+                            <div class="text-xs text-warm-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                4분 읽기
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 -->
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://picsum.photos/400/240?random=25" alt="수면건강" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">수면건강</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.10</time>
+                            </div>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mb-3 leading-tight">숙면을 위한 저녁 루틴 만들기</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed mb-4">
+                                질 좋은 잠을 위해 잠들기 2시간 전부터 실천할 수 있는 간단한 습관들을 정리해보았습니다.
+                            </p>
+                            <div class="text-xs text-warm-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                4분 읽기
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5 -->
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://picsum.photos/400/240?random=26" alt="운동법" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">운동건강</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.08</time>
+                            </div>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mb-3 leading-tight">중년 여성을 위한 맨손 운동</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed mb-4">
+                                무리하지 않으면서도 효과적으로 근력과 유연성을 기를 수 있는 실내 운동법을 소개합니다.
+                            </p>
+                            <div class="text-xs text-warm-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                6분 읽기
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6 -->
+                    <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://picsum.photos/400/240?random=27" alt="환자 후기" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">진료후기</span>
+                                <time class="text-sm text-warm-gray-500 ml-auto">2024.03.05</time>
+                            </div>
+                            <h3 class="text-lg font-medium text-warm-gray-900 mb-3 leading-tight">부정맥 치료 경험담</h3>
+                            <p class="text-warm-gray-600 text-sm leading-relaxed mb-4">
+                                3개월간의 한약 치료로 불규칙한 심장 박동이 안정되어 가는 과정을 환자분의 동의하에 공유합니다.
+                            </p>
+                            <div class="text-xs text-warm-gray-500 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                7분 읽기
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article Detail -->
+        <section class="py-20 bg-white" id="allergy-prevention">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <article class="prose prose-lg max-w-none">
+                    <header class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">건강 팁</span>
+                            <time class="text-sm text-warm-gray-500 ml-4">2024.03.20</time>
+                        </div>
+                        <h1 class="text-3xl font-light text-warm-gray-900 mb-4">봄철 알레르기 예방을 위한 생활수칙</h1>
+                        <p class="text-xl text-warm-gray-600 leading-relaxed">
+                            꽃가루가 날리는 계절이 다가왔습니다. 알레르기 증상으로 고생하시는 분들을 위해 
+                            미리 준비할 수 있는 자연스러운 예방법들을 정리해보았습니다.
+                        </p>
+                    </header>
+                    
+                    <div class="text-warm-gray-700 leading-relaxed space-y-6">
+                        <h2 class="text-2xl font-medium text-warm-gray-900 mt-8 mb-4">1. 외출 전 준비사항</h2>
+                        <p>
+                            꽃가루 농도가 높은 오전 시간대나 바람이 센 날에는 가능한 외출을 피하시고, 
+                            불가피하게 외출해야 할 경우 마스크 착용과 긴소매 옷차림을 권장합니다.
+                        </p>
+                        
+                        <h2 class="text-2xl font-medium text-warm-gray-900 mt-8 mb-4">2. 집안 환경 관리</h2>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>창문을 닫고 공기청정기를 사용하여 실내 공기를 정화합니다</li>
+                            <li>의류는 실내에서 건조하여 꽃가루 흡착을 방지합니다</li>
+                            <li>외출 후에는 샤워를 통해 몸에 붙은 꽃가루를 제거합니다</li>
+                        </ul>
+                        
+                        <h2 class="text-2xl font-medium text-warm-gray-900 mt-8 mb-4">3. 한의학적 접근법</h2>
+                        <p>
+                            한의학에서는 알레르기를 폐(肺)의 기능 저하와 면역력 불균형으로 봅니다. 
+                            평소 폐 기능을 강화하는 음식과 생활습관을 통해 근본적인 체질 개선을 도모할 수 있습니다.
+                        </p>
+                        
+                        <blockquote class="border-l-4 border-warm-gray-300 pl-6 italic text-warm-gray-600 my-8">
+                            "알레르기는 일시적인 증상 완화보다는 장기적인 체질 개선을 통해 
+                            근본적으로 해결하는 것이 중요합니다."
+                        </blockquote>
+                        
+                        <h2 class="text-2xl font-medium text-warm-gray-900 mt-8 mb-4">4. 도움이 되는 식품들</h2>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>은행:</strong> 폐 기능 강화와 기관지 건강에 도움</li>
+                            <li><strong>배:</strong> 폐를 촉촉하게 하고 기침 완화</li>
+                            <li><strong>도라지:</strong> 기관지 염증 완화와 가래 제거</li>
+                            <li><strong>생강차:</strong> 면역력 강화와 몸의 온기 증진</li>
+                        </ul>
+                        
+                        <p class="mt-8">
+                            개인의 체질과 증상에 따라 적합한 치료법이 다를 수 있으니, 
+                            지속적인 알레르기 증상이 있으시다면 전문의와 상담받으시기를 권합니다.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="py-16 bg-warm-gray-100">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h2 class="text-2xl font-light text-warm-gray-900 mb-4">건강 정보 받아보기</h2>
+                <p class="text-warm-gray-600 mb-8">
+                    새로운 건강 팁과 칼럼이 업데이트될 때마다 알림을 받아보세요.
+                </p>
+                <div class="max-w-md mx-auto">
+                    <form class="flex gap-3">
+                        <input type="email" placeholder="이메일 주소를 입력하세요" 
+                               class="flex-1 px-4 py-3 border border-warm-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-warm-gray-300">
+                        <button type="submit" 
+                                class="bg-warm-gray-900 text-white px-6 py-3 rounded-lg hover:bg-warm-gray-700 transition-colors">
+                            구독하기
+                        </button>
+                    </form>
+                </div>
+                <p class="text-xs text-warm-gray-500 mt-4">
+                    언제든지 구독을 취소할 수 있습니다. 개인정보는 안전하게 보호됩니다.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-warm-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-medium mb-4">창원 동양한의원</h3>
+                    <p class="text-warm-gray-300 text-sm leading-relaxed">
+                        몸의 리듬을 돌보는 한의학으로<br>
+                        건강한 일상을 함께 만들어갑니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">바로가기</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="column.html" class="text-warm-gray-300 hover:text-white transition-colors">삼촌의 한약 고찰</a></li>
+                        <li><a href="#" class="text-warm-gray-300 hover:text-white transition-colors">블로그</a></li>
+                        <li><a href="treatment.html" class="text-warm-gray-300 hover:text-white transition-colors">진료안내</a></li>
+                        <li><a href="consultation.html" class="text-warm-gray-300 hover:text-white transition-colors">상담신청</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">진료 문의</h4>
+                    <div class="text-sm space-y-2">
+                        <p class="text-warm-gray-300">055-123-4567</p>
+                        <p class="text-warm-gray-300">평일 09:00-18:00</p>
+                        <p class="text-warm-gray-300">토요일 09:00-15:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-warm-gray-700 mt-8 pt-8 text-center text-sm text-warm-gray-400">
+                <p>&copy; 2024 창원 동양한의원. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
