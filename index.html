@@ -24,6 +24,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -31,7 +34,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'korean': ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif']
+                        'korean': ['Pretendard Variable', 'Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif']
                     },
                     colors: {
                         'warm-gray': {
@@ -222,47 +225,63 @@
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-light text-warm-gray-900 mb-4">블로그</h2>
-                    <p class="text-lg text-warm-gray-600">건강한 일상을 위한 작은 팁들과 진료 이야기를 공유합니다</p>
-                    <a href="blog.html" class="inline-block mt-4 text-warm-gray-600 hover:text-warm-gray-900 text-sm font-medium transition-colors">
-                        전체 보기 →
-                    </a>
+                    <h2 class="text-3xl font-light text-warm-gray-900 mb-4">부정맥</h2>
+                    <p class="text-lg text-warm-gray-600">각각의 증상에 맞는 세심한 접근으로 근본적인 치료를 제공합니다</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <article class="flex space-x-4">
-                        <img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=120&h=120&fit=crop&crop=center" alt="한방차" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
-                        <div>
-                            <time class="text-sm text-warm-gray-500">2024.03.20</time>
-                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">“요즘 따라 심장이 더 뛰어요”</h3>
-                            <p class="text-warm-gray-600 text-sm">진단받았는데, 계속 두근거리는 이유</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                    <article class="blog-card" data-url="blog.html#arrhythmia1">
+                        <div class="blog-image-container">
+                            <div class="blog-image bg-gray-200"></div>
+                        </div>
+                        <div class="blog-content">
+                            <time class="blog-date">2024.03.20</time>
+                            <h3 class="blog-title">"요즘 따라 심장이 더 뛰어요"</h3>
+                            <p class="blog-description">진단받았는데, 계속 두근거리는 이유</p>
                         </div>
                     </article>
                     
-                    <article class="flex space-x-4">
-                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=120&h=120&fit=crop&crop=center" alt="침구치료" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
-                        <div>
-                            <time class="text-sm text-warm-gray-500">2024.03.18</time>
-                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">두근거림 완화를 위한 호흡법</h3>
-                            <p class="text-warm-gray-600 text-sm">간단하지만 효과적인 마음 안정 호흡 실습법</p>
+                    <article class="blog-card" data-url="blog.html#breathing">
+                        <div class="blog-image-container">
+                            <div class="blog-image bg-gray-200"></div>
+                        </div>
+                        <div class="blog-content">
+                            <time class="blog-date">2024.03.18</time>
+                            <h3 class="blog-title">두근거림 완화를 위한 호흡법</h3>
+                            <p class="blog-description">간단하지만 효과적인 마음 안정 호흡 실습법</p>
                         </div>
                     </article>
                     
-                    <article class="flex space-x-4">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=120&h=120&fit=crop&crop=center" alt="체질별 식품" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
-                        <div>
-                            <time class="text-sm text-warm-gray-500">2024.03.15</time>
-                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">혈압·혈당 다 정상이래요, 근데 자꾸 무기력해요</h3>
-                            <p class="text-warm-gray-600 text-sm">말초혈액순환 문제, 하지냉증, 손발저림 등</p>
+                    <article class="blog-card" data-url="blog.html#fatigue">
+                        <div class="blog-image-container">
+                            <div class="blog-image bg-gray-200"></div>
+                        </div>
+                        <div class="blog-content">
+                            <time class="blog-date">2024.03.15</time>
+                            <h3 class="blog-title">혈압·혈당 다 정상이래요, 근데 자꾸 무기력해요</h3>
+                            <p class="blog-description">말초혈액순환 문제, 하지냉증, 손발저림 등</p>
                         </div>
                     </article>
                     
-                    <article class="flex space-x-4">
-                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=120&h=120&fit=crop&crop=center" alt="한방차 재료" class="w-20 h-20 rounded-lg object-cover flex-shrink-0">
-                        <div>
-                            <time class="text-sm text-warm-gray-500">2024.03.12</time>
-                            <h3 class="text-lg font-medium text-warm-gray-900 mt-1 mb-2">환절기 감기 예방 차 레시피</h3>
-                            <p class="text-warm-gray-600 text-sm">집에서 쉽게 만들 수 있는 건강차 만들기</p>
+                    <article class="blog-card" data-url="blog.html#tea-recipe">
+                        <div class="blog-image-container">
+                            <div class="blog-image bg-gray-200"></div>
+                        </div>
+                        <div class="blog-content">
+                            <time class="blog-date">2024.03.12</time>
+                            <h3 class="blog-title">환절기 감기 예방 차 레시피</h3>
+                            <p class="blog-description">집에서 쉽게 만들 수 있는 건강차 만들기</p>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-url="blog.html#diet-tips">
+                        <div class="blog-image-container">
+                            <div class="blog-image bg-gray-200"></div>
+                        </div>
+                        <div class="blog-content">
+                            <time class="blog-date">2024.03.10</time>
+                            <h3 class="blog-title">체질별 건강 식단 가이드</h3>
+                            <p class="blog-description">개인 체질에 맞는 음식 선택법</p>
                         </div>
                     </article>
                 </div>
